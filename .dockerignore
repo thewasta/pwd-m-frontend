@@ -1,0 +1,10 @@
+.env
+.idea/
+node_modules/
+yarn.lock
+package-lock.json
+Dockerfile
+.dockerignore
+yarn-error.log
+pnpm-lock.yaml
+
