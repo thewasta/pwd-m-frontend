@@ -1,0 +1,51 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-ANSIHTML-1296849:
+    - react-scripts > @pmmmwh/react-refresh-webpack-plugin > ansi-html:
+        reason: 'No fix or patch, yet'
+        expires: '2021-10-30T20:03:07.766Z'
+    - react-scripts > webpack-dev-server > ansi-html:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-ANSIREGEX-1583908:
+    - react-scripts > webpack-dev-server > yargs > cliui > string-width > strip-ansi > ansi-regex:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-BROWSERSLIST-1090194:
+    - react-scripts > react-dev-utils > browserslist:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-CSSWHAT-1298035:
+    - react-scripts > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-EJS-1049328:
+    - react-scripts > workbox-webpack-plugin > workbox-build > @surma/rollup-plugin-off-main-thread > ejs:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-GLOBPARENT-1016905:
+    - react-scripts > webpack > watchpack > watchpack-chokidar2 > chokidar > glob-parent:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-IMMER-1540542:
+    - react-scripts > react-dev-utils > immer:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-LODASHTEMPLATE-1088054:
+    - react-scripts > workbox-webpack-plugin > workbox-build > lodash.template:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-NTHCHECK-1586032:
+    - react-scripts > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > nth-check:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+  SNYK-JS-SETVALUE-1540541:
+    - react-scripts > babel-jest > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.766Z'
+    - react-scripts > babel-jest > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: No fix or patch yet
+        expires: '2021-10-30T20:03:07.767Z'
+patch: {}
