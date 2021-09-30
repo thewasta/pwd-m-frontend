@@ -21,19 +21,36 @@ function LoginPage() {
         console.log(request);
     };
     return (
-        <div>
-            <form onSubmit={(event => handleSubmit(event))}>
-                <input type={"text"} placeholder={"Write your mail"} value={email}
-                       onChange={(event) => {
-                           setEmail(event.target.value);
-                       }}/>
-                <input type={"password"} placeholder={"Write your password"} value={password}
-                       onChange={(event) => {
-                           setPassword(event.target.value);
-                       }}/>
-                <button type={"submit"}>Entrar</button>
-            </form>
+
+        <div className="bg-white w-1/3 self-center rounded shadow-lg px-8 py-6 mb-4 flex flex-col">
+            <div className="mb-3">
+                <label className={"block text-gray-500 text-sm font-bold"} htmlFor={"username"}>
+                    Username
+                </label>
+                <input
+                    type={"text"}
+                    className={"shadow border rounded w-full py-2 px-3 text-gray-500"}
+                    id={"username"}/>
+                <p className={"mt-2 italic text-xs text-red-500"}>Please choose a username.</p>
+            </div>
+            <div className="mb-3">
+                <label className={"block text-gray-500 text-sm font-bold"} htmlFor={"password"}>
+                    Password
+                </label>
+                <input type={"password"} className={"shadow border rounded w-full py-2 px-3 text-gray-500"}
+                       id={"password"}/>
+                <p className={"mt-2 italic text-xs text-red-500"}>Please choose a password.</p>
+            </div>
+            <div className="flex items-center justify-between">
+                <button className="bg-blue-400 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" type="button">
+                    Sign In
+                </button>
+                <a className="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">
+                    Forgot Password?
+                </a>
+            </div>
         </div>
+
     );
 }
 
