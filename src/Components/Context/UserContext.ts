@@ -1,13 +1,17 @@
 import {createContext} from "react";
 
 interface iUserContext {
-    user: object | null;
-    setUser: any;
+    user: {
+        logged: boolean
+    };
+    dispatch: any;
 }
 
 let initState: iUserContext = {
-    user: null,
-    setUser: null
+    user: {
+        logged: false
+    },
+    dispatch: null
 };
 
 const UserContext = createContext(initState);
