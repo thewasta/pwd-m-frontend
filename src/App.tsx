@@ -10,14 +10,16 @@ const init = () => {
 function App() {
 
     const [user, dispatch] = useReducer(authReducer, {}, init);
+
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(user));
     }, [user]);
+
     return (
         <UserContext.Provider value={{user, dispatch}}>
             {
                 user.logged ?
-                    <div className={"relative min-h-screen md:flex"}>
+                    <div className={"relative bg-gray-50 min-h-screen md:flex"}>
                         <AppRouter/>
                     </div> :
                     <div className={"flex bg-gray-50 justify-center overscroll-none h-screen w-screen"}>

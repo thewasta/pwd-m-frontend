@@ -2,7 +2,11 @@ import {createContext} from "react";
 
 interface iUserContext {
     user: {
-        logged: boolean
+        logged: boolean,
+        user?: {
+            nick: string
+            uuid: string
+        } | null
     };
     dispatch: any;
 }

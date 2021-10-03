@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 interface iSidebarComponent {
     isMobileMenuActive: boolean;
@@ -30,6 +31,10 @@ const SidebarComponent = ({isMobileMenuActive}: iSidebarComponent) => {
             </nav>
         </div>
     );
+};
+
+SidebarComponent.prototype = {
+    isMobileMenuActive: PropTypes.string.isRequired
 };
 
 export default SidebarComponent;

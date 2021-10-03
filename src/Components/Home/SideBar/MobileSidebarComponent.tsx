@@ -1,5 +1,6 @@
 import React, {SetStateAction} from "react";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 interface iMobileSidebarComponent {
     isMobileMenuActive: boolean;
@@ -24,4 +25,8 @@ const MobileSidebarComponent = ({isMobileMenuActive, setMobileMenuActive}: iMobi
     </div>
 );
 
+MobileSidebarComponent.prototype = {
+    isMobileMenuActive: PropTypes.bool.isRequired,
+    setMobileMenuActive: PropTypes.func.isRequired
+};
 export default MobileSidebarComponent;

@@ -1,5 +1,5 @@
 import React, {FormEvent, useContext, useState} from "react";
-import {RouteComponentProps} from "react-router-dom";
+import {Link, RouteComponentProps} from "react-router-dom";
 import UserContext from "../Context/UserContext";
 import instance from "../../api/ApiRequest";
 import {authTypes} from "../../hooks/auth/authReducer";
@@ -8,7 +8,7 @@ interface iLoginPage {
     history: RouteComponentProps["history"];
 }
 
-const LoginPage = (props: iLoginPage) => {
+const LoginForm = (props: iLoginPage) => {
 
     const [nickName, setNickName] = useState("thewasta");
     const [password, setPassword] = useState("passWord12@");
@@ -41,7 +41,6 @@ const LoginPage = (props: iLoginPage) => {
         }
     };
     return (
-
         <div className="bg-white md:w-1/3 lg:w-1/4 self-center rounded shadow-lg px-8 py-6 mb-4 flex flex-col">
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -79,16 +78,23 @@ const LoginPage = (props: iLoginPage) => {
                             type="submit">
                         Sign In
                     </button>
-                    <a
-                        hrefLang={"#"}
+                    <Link
+                        to={"/register"}
                         className="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker">
+                        I need an account!
+                    </Link>
+
+                </div>
+                <div className="flex items-center justify-end mt-3">
+                    <Link
+                        to={"/reset-password"}
+                        className="inline-block align-baseline font-bold text-xs text-gray-500 hover:text-blue-darker">
                         Forgot Password?
-                    </a>
+                    </Link>
                 </div>
             </form>
         </div>
-
     );
 };
 
-export default LoginPage;
+export default LoginForm;
