@@ -27,7 +27,7 @@ const SidebarComponent = ({isMobileMenuActive}: iSidebarComponent) => {
             <nav>
                 <Link to="#"
                       className="block transition duration-200 rounded hover:bg-blue-700 hover:text-white-100 py-2.5 px-4">Home</Link>
-                <Link to="#" className="block rounded hover:bg-blue-700 py-2.5 px-4">My Passwords</Link>
+                <Link to="/view" className="block rounded hover:bg-blue-700 py-2.5 px-4">My Passwords</Link>
             </nav>
         </div>
     );
